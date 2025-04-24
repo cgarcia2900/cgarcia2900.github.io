@@ -1,0 +1,31 @@
+#ATF {
+    background-color: #283618;
+    color: #fefae0;
+    width: 100%;
+    height: 600px;
+    padding: 80px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+#name {
+    font-size: 180px;
+    line-height: 180px;
+}
+
+#occupation {
+    width: fit-content;
+    align-self: flex-end;
+    
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#occupation h2{
+    font-size: 30px;
+    padding: 23px;
+    padding-left: 40px;
+    align-self: flex-end;
+}
