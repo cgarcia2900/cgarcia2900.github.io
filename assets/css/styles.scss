@@ -14,5 +14,18 @@
 body {
     background-color: #dda15e;
     font-family: monospace;
-    padding: 0;
+    padding: 0px;
+}
+
+#page {
+    padding: 30px;
+    text-align: center;
+}
+
+#profile {
+    display: flex;
+}
+
+#profile span {
+    margin: 70px;
 }
