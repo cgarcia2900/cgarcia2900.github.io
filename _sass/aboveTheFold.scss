@@ -1,6 +1,12 @@
 #ATF {
-    background-color: #283618;
-    color: #fefae0;
+    background: 
+        url(/assets/images/photo_2025-04-28_16-09-15.jpg),
+        var(--mainColourDark) 
+        no-repeat;
+    background-blend-mode: overlay;
+    background-position-y: bottom;
+    background-size: 100%;
+    color: var(--bgColour);
     width: 100%;
     height: 600px;
     padding: 80px;
@@ -8,7 +14,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-}
+} 
 
 #name {
     font-size: 180px;

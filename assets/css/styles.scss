@@ -1,6 +1,7 @@
 ---
 ---
 
+@import "variables";
 @import "header";
 @import "footer";
 @import "aboveTheFold";
@@ -12,7 +13,7 @@
 }
 
 body {
-    background-color: #dda15e;
+    background-color: var(--bgColour);
     font-family: monospace;
     padding: 0px;
 }
