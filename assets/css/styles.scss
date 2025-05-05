@@ -13,31 +13,36 @@
 }
 
 body {
-    background-color: var(--mainColourDark);
+    background-color: var(--bgColour);
     font-family: monospace;
     padding: 0px;
     overflow-x: hidden;
 }
 
+#profileWrapper {
+    min-height: 2000px;
+}
+
 #backgroundImageContainer {
     position: absolute;
     width: 100%;
-    height: 1697px;
+    height: 1850px;
 }
 
 #backgroundImage {
     position: sticky;
     z-index: -2;
     background: 
+        var(--mainColourDark)
         url(/assets/images/photo_2025-05-01_17-21-19.jpg)
         no-repeat;
     background-size: cover;
-    background-position-x: -450px;
+    background-blend-mode: overlay;
+    //background-position-x: -450px;
     top:0;
     //background-attachment: fixed;
 
     height: 1000px;
-    
 }
 
 #page {
@@ -59,7 +64,7 @@ body {
 #bottomTriangle {
     z-index: -1;
 	position: absolute;
-    top: 200px;
+    top: 350px;
 	width: 0;
 	height: 0px;
 	border-left: 100vw solid transparent;
@@ -108,6 +113,23 @@ p {
 
 #skills {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 1000px;
+}
+
+#skillsList {
+    li {
+        padding: 10px;
+        margin: 20px 20px 20px; 
+        font-size: 50px;
+        width: auto;
+        display: inline;
+        background-color: var(--mainColourDark);
+        color: var(--bgColour);   
+    }
+    text-align: start;
+    flex-direction: row;
 }
 
 #skills span {

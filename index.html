@@ -4,47 +4,54 @@ layout: default
 
 <!DOCTYPE html>
 <html>
-    <div id="profile">
-        <span>
-            <h1>Hello, I am Carlo</h1>
-            <h2>Welcome to my digital portfolio. Here you will learn about me, my experiences, skills, and projects. </h2>
-            <p>I'm a recent graduate from the University of Manitoba, with a Bachelor of Science in Computer Science, with Co-op experience.</p>
-            <p>I'm an experienced software developer, with skills in Angular, Java, C#, .NET, HTML, CSS, ..., and more</p>
-            <p>I love video games, horror movies, basketball, volleyball, board games</p>
-        </span>
-    </div>
-    <div id="experience">
-        <span>
-            <h1>My &nbsp</h1>
-            <h1>Experiences</h1>
-        </span>
-    </div>
-    <div class="timeline">
-        <div class="container left">
-            <div class="content">
-                <h2>2023-2024</h2>
-                <p>Online Business systems</p>
-                <p>Software Developer Co-op</p>
-            </div>
+    <div id="profileWrapper">
+        <div id="profile">
+            <span>
+                <h1>HELLO, I AM CARLO</h1>
+                <h2>Welcome to my digital portfolio. Here you will learn about me, my experiences, skills, and projects. </h2>
+                <p>I'm a recent graduate from the University of Manitoba, with a Bachelor of Science in Computer Science, with Co-op experience.</p>
+                <p>I'm an experienced software developer, with skills in Angular, Java, C#, .NET, HTML, CSS, ..., and more</p>
+                <p>I love video games, horror movies, basketball, volleyball, board games</p>
+            </span>
         </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2023</h2>
-                <p>Treasury Board of Canada Secretariat</p>
-                <p>Information Technology Analyst</p>
-            </div>
+        <div id="experience">
+            <span>
+                <h1>MY &nbsp</h1>
+                <h1>EXPERIENCES</h1>
+            </span>
         </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2022</h2>
-                <p>Varian Medical Systems</p>
-                <p>Software Developer Co-op</p>
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <h2>2023-2024</h2>
+                    <p>Online Business systems</p>
+                    <p>Software Developer Co-op</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>2023</h2>
+                    <p>Treasury Board of Canada Secretariat</p>
+                    <p>Information Technology Analyst</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>2022</h2>
+                    <p>Varian Medical Systems</p>
+                    <p>Software Developer Co-op</p>
+                </div>
             </div>
         </div>
     </div>
     <div id="skills">
         <span>
             <h1>I am skilled in...</h1>
+            <div id="skillsList">
+                {% for skill in site.data.skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </div>
         </span>
     </div>
     <div id="projects">
