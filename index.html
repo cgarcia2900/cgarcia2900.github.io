@@ -46,10 +46,10 @@ layout: default
     </div>
     <div id="skills">
         <span>
-            <h1>I am skilled in...</h1>
+            <h1 id="skillsTitle">I AM SKILLED IN</h1>
             <ul id="skillsList">
                 {% for skill in site.data.skills %}
-                    <li>{{ skill }}</li>
+                    <li class="typed" data-text="{{ skill }}"></li>
                 {% endfor %}
             </ul>
         </span>

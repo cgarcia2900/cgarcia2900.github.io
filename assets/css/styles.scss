@@ -115,29 +115,32 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 1500px;
     background:
-        var(--mainColourDark)
+        var(--bgColour)
         linear-gradient(180deg,rgba(42, 123, 155, 0) 30%, rgba(0, 0, 0, 0.5) 85%);
     background-blend-mode: overlay;
+    transition: background-color 1s;
 }
 
 #skillsList {
     li {
-        padding: 0.5rem 1rem;
+        padding: 0.1rem 1.5rem;
         width: auto;
-        background-color: var(--secondaryColourDark);
-        color: var(--bgColour);   
-        border: 3px outset var(--mainColourLight);
-        border-radius: 20px;
-        transition: border 0.5s;
-        transition: font-size 0.5s;
+        color: var(--mainColourLight);
+        transition: font-size 0.2s;
+        transition-timing-function: ease-in;
+        align-self: center;
+    }
+
+    li:not(:empty) {
+        //box-shadow: 0 5px 10px var(--main);
+        border-bottom: 2px solid var(--secondaryColourDark);
     }
 
     li:hover {
-        border: 5px inset var(--mainColourLight);
-        font-size: 60px
+        font-size: 80px
     }
 
     gap: 1rem;
@@ -148,6 +151,10 @@ p {
     text-align: start;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#skillsTitle {
+    transition: color 1s;
 }
 
 #skills span {
@@ -229,7 +236,7 @@ p {
     background-color: var(--bgColour);
     position: relative;
     border: 5px solid var(--mainColourDark);
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -257,5 +264,17 @@ p {
 /* Make sure all circles are at the same spot */
     .left::after {
     left: 15px;
+    }
+}
+
+/*-----Typing Effect-----*/
+.cursor {
+    border-right: 2px solid white;
+    animation: blink 1s step-end infinite;  
+}
+    
+@keyframes blink {
+    50% {
+        border-right: 2px solid transparent;
     }
 }
