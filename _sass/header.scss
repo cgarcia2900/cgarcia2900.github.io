@@ -1,11 +1,11 @@
 #header{
-    background-color: var(--secondaryColourDark);
+    background-color: var(--mainColourDark);
     color: var(--bgColour);
 
     display: flex;
     justify-content: space-around;
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
 
     height: 50px;
     z-index: 3;

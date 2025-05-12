@@ -1,0 +1,53 @@
+#backgroundImageContainer {
+    position: absolute;
+    width: 100%;
+    height: 1900px;
+}
+
+#backgroundImage {
+    position: sticky;
+    z-index: -2;
+    background: 
+        //var(--mainColourDark)
+        url(/assets/images/20240807_190541.jpg)
+        no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position-y: -420px;
+    top:0;
+    //background-attachment: fixed;
+    height: 1000px;
+}
+
+#topTriangle {
+    z-index: -1;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 100vw solid transparent;
+	border-top: 1500px solid var(--bgColour);
+}
+
+#topTriangle::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right:0px;
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+    border-right: 5px solid var(--mainColourDark);
+    z-index: 1;
+}
+
+#bottomTriangle {
+    z-index: -1;
+	position: absolute;
+    top: 400px;
+	width: 0;
+	height: 0px;
+	border-left: 100vw solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 1500px solid var(--bgColour);;
+}

@@ -5,6 +5,7 @@
 @import "header";
 @import "footer";
 @import "aboveTheFold";
+@import "triangleBackground";
 
 * {
     padding:0;
@@ -14,7 +15,7 @@
 
 body {
     background-color: var(--bgColour);
-    font-family: monospace;
+    font-family: "Cal Sans", sans-serif;
     padding: 0px;
     overflow-x: hidden;
 }
@@ -23,53 +24,10 @@ body {
     min-height: 2000px;
 }
 
-#backgroundImageContainer {
-    position: absolute;
-    width: 100%;
-    height: 1850px;
-}
-
-#backgroundImage {
-    position: sticky;
-    z-index: -2;
-    background: 
-        var(--mainColourDark)
-        url(/assets/images/photo_2025-05-01_17-21-19.jpg)
-        no-repeat;
-    background-size: cover;
-    background-blend-mode: overlay;
-    //background-position-x: -450px;
-    top:0;
-    //background-attachment: fixed;
-
-    height: 1000px;
-}
-
 #page {
     position:relative;
     text-align: center;
     width: 100%;
-}
-
-#topTriangle {
-    z-index: -1;
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-left: 0px solid transparent;
-	border-right: 100vw solid transparent;
-	border-top: 1500px solid var(--bgColour);
-}
-
-#bottomTriangle {
-    z-index: -1;
-	position: absolute;
-    top: 350px;
-	width: 0;
-	height: 0px;
-	border-left: 100vw solid transparent;
-	border-right: 0px solid transparent;
-	border-bottom: 1500px solid var(--bgColour);;
 }
 
 h1 {
@@ -78,7 +36,7 @@ h1 {
 
 h2 {
     font-size: 35px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Roboto", sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
     color: var(--secondaryColourDark);

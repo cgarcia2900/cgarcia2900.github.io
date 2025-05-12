@@ -3,6 +3,9 @@
     <head>
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="{{ '/assets/js/main.js' | relative_url}}"></script>
         <meta charset="utf-8">
@@ -13,18 +16,11 @@
     {% include aboveTheFold.html %}
 
     <div id="page">
-        <div id="topTriangle"></div>
-        <div id="bottomTriangle"></div>
-        <div id="backgroundImageContainer">
-            <div id="backgroundImage">
-                
-            </div>
-        </div>
+        {% include triangleBackground.html %}
         <div id="mainBody">
             {{ content }}
         </div>
     </div>
 
     {% include footer.html %}
-    </div>
 </html>
