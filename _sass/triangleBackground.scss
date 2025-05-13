@@ -1,7 +1,8 @@
 #backgroundImageContainer {
     position: absolute;
     width: 100%;
-    height: calc(100vw * 1.5);
+    height: 150vw;
+    //overflow-y: hidden;
 }
 
 #backgroundImage {
@@ -13,10 +14,11 @@
         no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-    background-position-y: calc(100vw * -0.35);
+    background-position-y: -35vw;
     top:0;
-    //background-attachment: fixed;
-    height: 1000px;
+    // //background-attachment: fixed;
+    height: min(100vh, 150vw);
+    // max-height: max(100vh, 150vw);
 }
 
 #topTriangle {
@@ -26,7 +28,7 @@
 	height: 0;
 	border-left: 0px solid transparent;
 	border-right: 100vw solid transparent;
-	border-top: calc(100vw * 1.2) solid var(--bgColour);
+	border-top: 120vw solid var(--bgColour);
 }
 
 #topTriangle::after {
@@ -44,10 +46,10 @@
 #bottomTriangle {
     z-index: -1;
 	position: absolute;
-    top: calc(100vw * 0.3);
+    top: 30vw;
 	width: 0;
 	height: 0px;
 	border-left: 100vw solid transparent;
 	border-right: 0px solid transparent;
-	border-bottom: calc(100vw * 1.20 + 1px) solid var(--bgColour);;
+	border-bottom: calc(120vw + 1px) solid var(--bgColour);;
 }
